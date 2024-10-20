@@ -1,3 +1,4 @@
+
 console.log(`typescript tutorial`);
 
 // check friend name
@@ -52,8 +53,24 @@ console.log(createEmployee({ id: 20 }));
 // another example without destructuring
 
 function welcomeStudent(student:{id:number,name:string}):void{
-
-    console.log(`Welcome student of roll ${student.id} and name ${student.name}`)
+  
+  console.log(`Welcome student of roll ${student.id} and name ${student.name}`)
 }
 
 welcomeStudent({id:10,name:"krishna Tiwari"})
+
+// importing type alias and use it 
+import { Staff, StringOrNumber, Theme } from "./types";
+let someNumber:StringOrNumber;
+someNumber="10"
+someNumber=20
+// above both are valid
+
+// theme import from type alias
+let userTheme :Theme
+
+userTheme="dark"
+userTheme= "light"
+
+
+// staff print details
