@@ -17,3 +17,26 @@ enum AnotherDirection {
 }
 
 console.log(AnotherDirection.Right)
+
+
+// another exaqmle enum
+enum ServerResponseStatus{
+    Success,
+    Error
+}
+
+interface ServerResponse {
+result:ServerResponseStatus,
+data :string[]
+}
+
+function getServerResponse():ServerResponse{
+    return {
+        result:ServerResponseStatus.Success,
+        data:["firstItem","secondItem"]
+    }
+}
+
+const serverResponse:ServerResponse = getServerResponse();
+
+console.log(serverResponse)
