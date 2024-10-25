@@ -38,3 +38,21 @@ const arrowFunction = <T>(data: T): T => {
 // call the function <string> define explicitely by user if not given identifided by typescript and is the common method of calling generics function
 
 console.log(arrowFunction<string>("Hello"));
+
+
+// generic function
+
+function generateStringArray(length:number,value:string):string[]{
+    return Array.from({length},()=>value)
+}
+
+console.log(generateStringArray(5,"Hello"));
+
+//generic funtion that returns an array of any type
+
+function generateArray<T>(length:number,value:T):T[]{
+    return Array.from({length},()=>value)
+}
+
+console.log(generateArray<string>(5,"Hello"));
+console.log(generateArray<number>(5,5));
